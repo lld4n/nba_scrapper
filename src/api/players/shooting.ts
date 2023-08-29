@@ -46,6 +46,7 @@ export async function playersshooting(alphabet: string, path: string, key: strin
   const data: dataPlayersShootingType = {
     table: null,
     chart: [],
+    text: null,
   };
   // return utilsreformat(html.data);
   $('#shooting').each(async (_, element) => {
@@ -92,6 +93,13 @@ export async function playersshooting(alphabet: string, path: string, key: strin
     });
     data.chart.sort((a, b) => a.date - b.date);
   });
+  data.text = $('#content strong')
+    .eq(0)
+    .text()
+    .replace('(Reset all: [X])', '')
+    .replace(/\[X\]/g, '')
+    .replace(/ ,/g, ',')
+    .trim();
   response.data = data;
   return response;
 }

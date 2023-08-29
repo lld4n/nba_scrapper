@@ -93,4 +93,5 @@ export type dataPlayersGamelogType = {
 export type dataPlayersShootingType = {
   table: TableType | null;
   chart: ChartPlayersType[];
+  text: string | null;
 };
