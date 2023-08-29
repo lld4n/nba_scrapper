@@ -2,7 +2,7 @@ import cheerio from 'cheerio';
 import axios from 'axios';
 import { utilsalphabets, utilsreformat } from '../../utils';
 import { responseType } from '../../@types/response';
-import { dataPlayersContractType, dataPlayersFAQType } from '../../@types/data';
+import { dataPlayersFAQType } from '../../@types/data';
 
 export async function playersfaq(alphabet: string, path: string) {
   const response: responseType = {

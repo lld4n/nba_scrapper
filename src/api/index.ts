@@ -11,6 +11,10 @@ import { playersfaq } from './players/faq';
 import { playerssplits } from './players/splits';
 import { playersgamelog } from './players/gamelog';
 import { playersshooting } from './players/shooting';
+import { teamslist } from './teams/list';
+import { teamsinfo } from './teams/info';
+import { teamslogos } from './teams/logos';
+import { logos } from './logos';
 
 export {
   otheractualseason,
@@ -26,4 +30,8 @@ export {
   playerssplits,
   playersgamelog,
   playersshooting,
+  teamslist,
+  teamsinfo,
+  teamslogos,
+  logos,
 };

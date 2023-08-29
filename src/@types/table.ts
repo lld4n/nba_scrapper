@@ -17,4 +17,5 @@ export type TableElementType = {
   href: string | null;
   text: string;
   colspan: string | null;
+  star: boolean;
 };

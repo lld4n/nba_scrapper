@@ -25,11 +25,12 @@ export async function utilstablesscrapper($: cheerio.Root, celem: cheerio.Elemen
       const light = $(element).hasClass('light_text');
       $('th, td', element).each((_, elem) => {
         tableRow.push({
-          text: $(elem).text().trim(),
+          text: $(elem).text().replace('*', '').trim(),
           colspan: $(elem).attr('colspan') || null,
           href: $('a', elem).attr('href')?.replace('?', '$') || null,
           bold: Boolean($('strong', elem).html()),
           light,
+          star: $(elem).text().trim().includes('*'),
         });
       });
       table.body.push(tableRow);
@@ -40,11 +41,12 @@ export async function utilstablesscrapper($: cheerio.Root, celem: cheerio.Elemen
     const tableRow: TableElementType[] = [];
     $('th, td', element).each((_, elem) => {
       tableRow.push({
-        text: $(elem).text().trim(),
+        text: $(elem).text().replace('*', '').trim(),
         colspan: $(elem).attr('colspan') || null,
         href: $('a', elem).attr('href') || null,
         bold: false,
         light: false,
+        star: $(elem).text().trim().includes('*'),
       });
     });
     table.foot.push(tableRow);

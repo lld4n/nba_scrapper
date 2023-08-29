@@ -1,4 +1,5 @@
 import {
+  logos,
   otheractualseason,
   othersearch,
   playersalphabet,
@@ -12,6 +13,9 @@ import {
   playersshooting,
   playerssplits,
   playerstransactions,
+  teamsinfo,
+  teamslist,
+  teamslogos,
 } from './api';
 import { responseType } from './@types/response';
 import express from 'express';
@@ -188,6 +192,59 @@ app.get('/players/:alphabet/:path/shooting/:key', async (req, res) => {
     res.send(response);
   } catch (error) {
     console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/teams/list', async (req, res) => {
+  try {
+    const response = await teamslist();
+    res.send(response);
+  } catch (error) {
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/teams/:key', async (req, res) => {
+  try {
+    const response = await teamsinfo(req.params.key);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/teams/:key/logos', async (req, res) => {
+  try {
+    const response = await teamslogos(req.params.key);
+    res.send(response);
+  } catch (error) {
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/logos/:key', async (req, res) => {
+  try {
+    const response = await logos(req.params.key);
+    res.send(response);
+  } catch (error) {
     const response: responseType = {
       OK: false,
       error,

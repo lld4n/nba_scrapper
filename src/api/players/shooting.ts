@@ -1,11 +1,9 @@
 import cheerio from 'cheerio';
 import axios from 'axios';
-import { utilsalphabets, utilsreformat } from '../../utils';
+import { utilsalphabets, utilsreformat, utilstablesscrapper, utilsdatems } from '../../utils';
 import { responseType } from '../../@types/response';
 import { dataPlayersShootingType } from '../../@types/data';
-import { utilstablesscrapper } from '../../utils/utilstablesscrapper';
 import { TableHeadersType } from '../../@types/table';
-import { utilsdatems } from '../../utils/utilsdatems';
 
 const headersbuffer: TableHeadersType[] = [
   { text: 'Split', tip: null, colspan: null },

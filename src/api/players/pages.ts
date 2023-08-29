@@ -1,9 +1,13 @@
 import cheerio from 'cheerio';
 import axios from 'axios';
-import { utilsalphabets, utilsplayerstables, utilsreformat } from '../../utils';
+import {
+  utilsalphabets,
+  utilsplayerstables,
+  utilsreformat,
+  utilstablesscrapper,
+} from '../../utils';
 import { responseType } from '../../@types/response';
 import { dataPlayersPagesType } from '../../@types/data';
-import { utilstablesscrapper } from '../../utils/utilstablesscrapper';
 
 export async function playerspages(alphabet: string, path: string, key: string) {
   const response: responseType = {

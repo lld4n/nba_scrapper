@@ -1,9 +1,8 @@
 import cheerio from 'cheerio';
 import axios from 'axios';
-import { utilsalphabets, utilsreformat } from '../../utils';
+import { utilsalphabets, utilsreformat, utilstablesscrapper } from '../../utils';
 import { responseType } from '../../@types/response';
 import { dataPlayersSplitsType } from '../../@types/data';
-import { utilstablesscrapper } from '../../utils/utilstablesscrapper';
 
 export async function playerssplits(alphabet: string, path: string, key: string) {
   const response: responseType = {

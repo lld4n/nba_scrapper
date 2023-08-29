@@ -1,5 +1,6 @@
 import { ActualSeasonConferenceType } from './actualseason';
 import { ChartPlayersType, ChartType } from './chart';
+import { TeamsLogosElementType } from './logos';
 import { PlayersAlphabetBodyType, PlayersAlphabetHeadersType } from './playersalphabet';
 import { PlayersAwardsType } from './playersawards';
 import {
@@ -28,7 +29,11 @@ export type dataType =
   | dataPlayersFAQType
   | dataPlayersSplitsType
   | dataPlayersGamelogType
-  | dataPlayersShootingType;
+  | dataPlayersShootingType
+  | dataTeamsListType
+  | dataTeamsInfoType
+  | dataTeamsLogosType
+  | dataLogosType;
 
 export type dataActualSeasonType = {
   east: ActualSeasonConferenceType[][];
@@ -39,10 +44,7 @@ export type dataSearchType = SearchType[];
 
 export type dataPlayersListType = PlayersList[];
 
-export type dataPlayersAlphabetType = {
-  headers: PlayersAlphabetHeadersType[];
-  body: PlayersAlphabetBodyType[][];
-};
+export type dataPlayersAlphabetType = { table: TableType | null };
 
 export type dataPlayersInfoType = {
   title: string;
@@ -94,4 +96,37 @@ export type dataPlayersShootingType = {
   table: TableType | null;
   chart: ChartPlayersType[];
   text: string | null;
+};
+
+export type dataTeamsListType = {
+  active: {
+    table: TableType | null;
+  };
+  defunct: {
+    table: TableType | null;
+  };
+};
+
+export type dataTeamsInfoType = {
+  table: TableType | null;
+  title: string;
+  key: string;
+  imgbuffer: string;
+  bio: PlayersInfoBio[];
+  players: {
+    name: string;
+    ws: string;
+    imgbuffer: string;
+    image: string | null;
+    href: string;
+  }[];
+  links: string[];
+};
+
+export type dataTeamsLogosType = TeamsLogosElementType[];
+
+export type dataLogosType = {
+  src: string | null;
+  name: string;
+  desc: string[];
 };
