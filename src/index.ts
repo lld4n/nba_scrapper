@@ -5,9 +5,12 @@ import {
   playersawards,
   playerscontract,
   playersfaq,
+  playersgamelog,
   playersinfo,
   playerslist,
   playerspages,
+  playersshooting,
+  playerssplits,
   playerstransactions,
 } from './api';
 import { responseType } from './@types/response';
@@ -57,7 +60,12 @@ app.get('/players/list', async (req, res) => {
 
 app.get('/players/:alphabet', async (req, res) => {
   try {
-    const response = await playersalphabet(req.params.alphabet);
+    let response;
+    if (req.params.alphabet.includes('shooting')) {
+      response = await playersshooting(req.params.alphabet, '', '');
+    } else {
+      response = await playersalphabet(req.params.alphabet);
+    }
     res.send(response);
   } catch (error) {
     const response: responseType = {
@@ -148,7 +156,48 @@ app.get('/players/:alphabet/:path/pages/:key', async (req, res) => {
   }
 });
 
+app.get('/players/:alphabet/:path/splits/:key', async (req, res) => {
+  try {
+    const response = await playerssplits(req.params.alphabet, req.params.path, req.params.key);
+    res.send(response);
+  } catch (error) {
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/players/:alphabet/:path/gamelog/:key', async (req, res) => {
+  try {
+    const response = await playersgamelog(req.params.alphabet, req.params.path, req.params.key);
+    res.send(response);
+  } catch (error) {
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/players/:alphabet/:path/shooting/:key', async (req, res) => {
+  try {
+    const response = await playersshooting(req.params.alphabet, req.params.path, req.params.key);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
 app.use((req, res) => {
+  // console.log(req.path);
   const response: responseType = {
     OK: false,
   };

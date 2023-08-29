@@ -24,6 +24,11 @@ export async function playersinfo(alphabet: string, path: string) {
     socials: [],
     bio: [],
     keys: [],
+    links: {
+      gamelog: [],
+      splits: [],
+      shooting: [],
+    },
   };
   $('.stats_pullout div div').each((_, element) => {
     const statsColumn: string[] = [];
@@ -80,6 +85,24 @@ export async function playersinfo(alphabet: string, path: string) {
   utilsplayerstables.map((el) => {
     if ($('#' + el.id).html()) {
       data.keys.push(el);
+    }
+  });
+  $('#bottom_nav_container a').each((_, element) => {
+    if ($(element).attr('href').includes('gamelog')) {
+      data.links.gamelog.push({
+        text: $(element).text().trim(),
+        href: $(element).attr('href'),
+      });
+    } else if ($(element).attr('href').includes('splits')) {
+      data.links.splits.push({
+        text: $(element).text().trim(),
+        href: $(element).attr('href'),
+      });
+    } else if ($(element).attr('href').includes('shooting')) {
+      data.links.shooting.push({
+        text: $(element).text().trim(),
+        href: $(element).attr('href'),
+      });
     }
   });
 

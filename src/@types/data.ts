@@ -1,10 +1,12 @@
 import { ActualSeasonConferenceType } from './actualseason';
+import { ChartPlayersType, ChartType } from './chart';
 import { PlayersAlphabetBodyType, PlayersAlphabetHeadersType } from './playersalphabet';
 import { PlayersAwardsType } from './playersawards';
 import {
   PlayersInfoBio,
   PlayersInfoJersies,
   PlayersInfoKeys,
+  PlayersInfoLinks,
   PlayersInfoSocials,
 } from './playersinfo';
 import { PlayersList } from './playerslist';
@@ -23,7 +25,10 @@ export type dataType =
   | dataPlayersAwardsType
   | dataPlayersTransactionsType
   | dataPlayersContractType
-  | dataPlayersFAQType;
+  | dataPlayersFAQType
+  | dataPlayersSplitsType
+  | dataPlayersGamelogType
+  | dataPlayersShootingType;
 
 export type dataActualSeasonType = {
   east: ActualSeasonConferenceType[][];
@@ -47,10 +52,11 @@ export type dataPlayersInfoType = {
   socials: PlayersInfoSocials[];
   bio: PlayersInfoBio[];
   keys: PlayersInfoKeys[];
+  links: PlayersInfoLinks;
 };
 
 export type dataPlayersPagesType = {
-  table: TableType;
+  table: TableType | null;
 };
 
 export type dataPlayersAwardsType = {
@@ -73,3 +79,18 @@ export type dataPlayersFAQType = {
   text: string;
   href: string | null;
 }[];
+
+export type dataPlayersSplitsType = {
+  table: TableType | null;
+  heading: string[];
+};
+
+export type dataPlayersGamelogType = {
+  regular: TableType | null;
+  playoffs: TableType | null;
+};
+
+export type dataPlayersShootingType = {
+  table: TableType | null;
+  chart: ChartPlayersType[];
+};

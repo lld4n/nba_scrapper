@@ -18,3 +18,14 @@ export type PlayersInfoKeys = {
   id: string;
   text: string;
 };
+
+export type PlayersInfoLinks = {
+  gamelog: PlayersInfoLinksElementType[];
+  splits: PlayersInfoLinksElementType[];
+  shooting: PlayersInfoLinksElementType[];
+};
+
+export type PlayersInfoLinksElementType = {
+  text: string;
+  href: string | null;
+};

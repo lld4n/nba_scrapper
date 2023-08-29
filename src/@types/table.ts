@@ -1,8 +1,8 @@
 export type TableType = {
   caption: string;
-  headers: TableHeadersType[][];
-  body: TableElementType[][];
-  foot: TableElementType[][];
+  headers: TableHeadersType[][] | null;
+  body: TableElementType[][] | null;
+  foot: TableElementType[][] | null;
 };
 
 export type TableHeadersType = {

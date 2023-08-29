@@ -27,7 +27,7 @@ export async function utilstablesscrapper($: cheerio.Root, celem: cheerio.Elemen
         tableRow.push({
           text: $(elem).text().trim(),
           colspan: $(elem).attr('colspan') || null,
-          href: $('a', elem).attr('href') || null,
+          href: $('a', elem).attr('href')?.replace('?', '$') || null,
           bold: Boolean($('strong', elem).html()),
           light,
         });
@@ -49,5 +49,14 @@ export async function utilstablesscrapper($: cheerio.Root, celem: cheerio.Elemen
     });
     table.foot.push(tableRow);
   });
+  if (table.headers.length === 0) {
+    table.headers = null;
+  }
+  if (table.body.length === 0) {
+    table.body = null;
+  }
+  if (table.foot.length === 0) {
+    table.foot = null;
+  }
   return table;
 }

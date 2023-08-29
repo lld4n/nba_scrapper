@@ -22,12 +22,7 @@ export async function playerspages(alphabet: string, path: string, key: string) 
     return response;
   }
   const data: dataPlayersPagesType = {
-    table: {
-      caption: '',
-      headers: [],
-      body: [],
-      foot: [],
-    },
+    table: null,
   };
   $('#' + key).each(async (_, element) => {
     data.table = await utilstablesscrapper($, element);

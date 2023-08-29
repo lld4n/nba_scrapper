@@ -8,6 +8,10 @@ import { playersawards } from './players/awards';
 import { playerstransactions } from './players/transactions';
 import { playerscontract } from './players/contract';
 import { playersfaq } from './players/faq';
+import { playerssplits } from './players/splits';
+import { playersgamelog } from './players/gamelog';
+import { playersshooting } from './players/shooting';
+
 export {
   otheractualseason,
   othersearch,
@@ -19,4 +23,7 @@ export {
   playerstransactions,
   playerscontract,
   playersfaq,
+  playerssplits,
+  playersgamelog,
+  playersshooting,
 };
