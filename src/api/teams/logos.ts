@@ -1,6 +1,7 @@
 import cheerio from 'cheerio';
 import axios from 'axios';
-import { utilscommands, utilsreformat } from '../../utils';
+import { utilsreformat } from '../../utils';
+import { mascommands } from '../../mas';
 import { responseType } from '../../@types/response';
 import { dataTeamsLogosType } from '../../@types/data';
 import { TeamsLogosElementType } from '../../@types/logos';
@@ -9,11 +10,11 @@ export async function teamslogos(key: string) {
   const response: responseType = {
     OK: true,
   };
-  if (!utilscommands.find((el) => el.id === key)) {
+  if (!mascommands.find((el) => el.id === key)) {
     response.OK = false;
     return response;
   }
-  const html = await axios.get(utilscommands.find((el) => el.id === key).urllogo);
+  const html = await axios.get(mascommands.find((el) => el.id === key).urllogo);
   const $ = cheerio.load(utilsreformat(html.data));
   const data: dataTeamsLogosType = [];
   $('.content .section').each((_, element) => {

@@ -18,4 +18,6 @@ export type TableElementType = {
   text: string;
   colspan: string | null;
   star: boolean;
+  astericks: boolean;
+  ring: boolean;
 };

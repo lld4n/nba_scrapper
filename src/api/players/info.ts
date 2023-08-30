@@ -1,14 +1,16 @@
 import cheerio from 'cheerio';
 import axios from 'axios';
-import { utilsalphabets, utilsplayerstables, utilsreformat } from '../../utils';
+import { utilsreformat } from '../../utils';
+import { masalphabet } from '../../mas';
 import { responseType } from '../../@types/response';
 import { dataPlayersInfoType } from '../../@types/data';
+import { masplayers } from '../../mas';
 
 export async function playersinfo(alphabet: string, path: string) {
   const response: responseType = {
     OK: true,
   };
-  if (!utilsalphabets.includes(alphabet.toUpperCase())) {
+  if (!masalphabet.includes(alphabet.toUpperCase())) {
     response.OK = false;
     return response;
   }
@@ -81,7 +83,7 @@ export async function playersinfo(alphabet: string, path: string) {
         }
       });
   });
-  utilsplayerstables.map((el) => {
+  masplayers.map((el) => {
     if ($('#' + el.id).html()) {
       data.keys.push(el);
     }

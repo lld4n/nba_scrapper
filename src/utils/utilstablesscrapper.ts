@@ -24,13 +24,23 @@ export async function utilstablesscrapper($: cheerio.Root, celem: cheerio.Elemen
       const tableRow: TableElementType[] = [];
       const light = $(element).hasClass('light_text');
       $('th, td', element).each((_, elem) => {
+        let hrf = null;
+        $('a', elem).each((i, e) => {
+          if (i === 0) {
+            hrf = $(e).attr('href')?.replace('?', '$');
+          } else {
+            hrf = null;
+          }
+        });
         tableRow.push({
           text: $(elem).text().replace('*', '').trim(),
           colspan: $(elem).attr('colspan') || null,
-          href: $('a', elem).attr('href')?.replace('?', '$') || null,
+          href: hrf,
           bold: Boolean($('strong', elem).html()),
           light,
-          star: $(elem).text().trim().includes('*'),
+          astericks: $(elem).text().trim().includes('*'),
+          star: $(elem).hasClass('sr_star'),
+          ring: $(elem).hasClass('sr_ring'),
         });
       });
       table.body.push(tableRow);
@@ -46,7 +56,9 @@ export async function utilstablesscrapper($: cheerio.Root, celem: cheerio.Elemen
         href: $('a', elem).attr('href') || null,
         bold: false,
         light: false,
-        star: $(elem).text().trim().includes('*'),
+        astericks: $(elem).text().trim().includes('*'),
+        star: $(elem).hasClass('sr_star'),
+        ring: $(elem).hasClass('sr_ring'),
       });
     });
     table.foot.push(tableRow);

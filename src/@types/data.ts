@@ -56,6 +56,7 @@ export type dataPlayersInfoType = {
 };
 
 export type dataTableType = {
+  heading: string | null;
   table: TableType | null;
 };
 

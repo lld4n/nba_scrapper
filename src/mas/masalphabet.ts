@@ -1,4 +1,4 @@
-export const utilsalphabets: string[] = [
+export const masalphabet: string[] = [
   'A',
   'B',
   'C',

@@ -1,4 +1,4 @@
-export const utilscommands: {
+export const mascommands: {
   urllogo: string;
   bg: string;
   color: string;

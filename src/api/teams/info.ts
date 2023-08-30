@@ -49,7 +49,11 @@ export async function teamsinfo(key: string) {
         });
     });
   $('#bottom_nav li').each((_, element) => {
-    data.links.push($('a', element).attr('href'));
+    data.links.push(
+      $('a', element)
+        .attr('href')
+        .replace('/' + key + '/', '/' + key + '/pages/'),
+    );
   });
   response.data = data;
   return response;

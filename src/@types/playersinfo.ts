@@ -1,3 +1,5 @@
+import { MasType } from '../mas';
+
 export type PlayersInfoJersies = {
   number: string;
   command: string;
@@ -14,10 +16,7 @@ export type PlayersInfoBio = {
   text: string;
 };
 
-export type PlayersInfoKeys = {
-  id: string;
-  text: string;
-};
+export type PlayersInfoKeys = MasType;
 
 export type PlayersInfoLinks = {
   gamelog: PlayersInfoLinksElementType[];

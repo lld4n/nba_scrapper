@@ -1,6 +1,7 @@
 import cheerio from 'cheerio';
 import axios from 'axios';
-import { utilsalphabets, utilsreformat, utilstablesscrapper } from '../../utils';
+import { utilsreformat, utilstablesscrapper } from '../../utils';
+import { masalphabet } from '../../mas';
 import { responseType } from '../../@types/response';
 import { dataPlayersGamelogType } from '../../@types/data';
 
@@ -8,7 +9,7 @@ export async function playersgamelog(alphabet: string, path: string, key: string
   const response: responseType = {
     OK: true,
   };
-  if (!utilsalphabets.includes(alphabet.toUpperCase())) {
+  if (!masalphabet.includes(alphabet.toUpperCase())) {
     response.OK = false;
     return response;
   }

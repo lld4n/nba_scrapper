@@ -1,6 +1,7 @@
 import cheerio from 'cheerio';
 import axios from 'axios';
-import { utilsalphabets, utilsreformat, utilstablesscrapper, utilsdatems } from '../../utils';
+import { utilsreformat, utilstablesscrapper, utilsdatems } from '../../utils';
+import { masalphabet } from '../../mas';
 import { responseType } from '../../@types/response';
 import { dataPlayersShootingType } from '../../@types/data';
 import { TableHeadersType } from '../../@types/table';
@@ -31,7 +32,7 @@ export async function playersshooting(alphabet: string, path: string, key: strin
   if (alphabet.includes('shooting')) {
     url += alphabet.replace('$', '?');
   } else {
-    if (!utilsalphabets.includes(alphabet.toUpperCase())) {
+    if (!masalphabet.includes(alphabet.toUpperCase())) {
       response.OK = false;
       return response;
     } else {

@@ -9,7 +9,7 @@ export async function othersearch(key: string) {
     OK: true,
   };
   const html = await axios.get(
-    `https://www.basketball-reference.com/search/search.fcgi?search=${key}`,
+    `https://www.basketball-reference.com/search/search.fcgi?search=${key}-`,
   );
   const $ = cheerio.load(utilsreformat(html.data));
   const data: dataSearchType = [];

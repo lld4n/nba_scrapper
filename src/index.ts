@@ -3,16 +3,12 @@ import {
   otheractualseason,
   othersearch,
   playersalphabet,
-  playersawards,
-  playerscontract,
-  playersfaq,
   playersgamelog,
   playersinfo,
   playerslist,
   playerspages,
   playersshooting,
   playerssplits,
-  playerstransactions,
   teamsinfo,
   teamslist,
   teamslogos,
@@ -20,7 +16,7 @@ import {
 } from './api';
 import { responseType } from './@types/response';
 import express from 'express';
-import { utilsteamstables } from './utils';
+import { masteamspages } from './mas';
 
 const app = express();
 const PORT = 3000;
@@ -87,60 +83,6 @@ app.get('/players/:alphabet/:path/info', async (req, res) => {
     const response = await playersinfo(req.params.alphabet, req.params.path);
     res.send(response);
   } catch (error) {
-    const response: responseType = {
-      OK: false,
-      error,
-    };
-    res.status(500).send(response);
-  }
-});
-
-app.get('/players/:alphabet/:path/awards', async (req, res) => {
-  try {
-    const response = await playersawards(req.params.alphabet, req.params.path);
-    res.send(response);
-  } catch (error) {
-    const response: responseType = {
-      OK: false,
-      error,
-    };
-    res.status(500).send(response);
-  }
-});
-
-app.get('/players/:alphabet/:path/transactions', async (req, res) => {
-  try {
-    const response = await playerstransactions(req.params.alphabet, req.params.path);
-    res.send(response);
-  } catch (error) {
-    const response: responseType = {
-      OK: false,
-      error,
-    };
-    res.status(500).send(response);
-  }
-});
-
-app.get('/players/:alphabet/:path/contract', async (req, res) => {
-  try {
-    const response = await playerscontract(req.params.alphabet, req.params.path);
-    res.send(response);
-  } catch (error) {
-    console.log(error);
-    const response: responseType = {
-      OK: false,
-      error,
-    };
-    res.status(500).send(response);
-  }
-});
-
-app.get('/players/:alphabet/:path/faq', async (req, res) => {
-  try {
-    const response = await playersfaq(req.params.alphabet, req.params.path);
-    res.send(response);
-  } catch (error) {
-    console.log(error);
     const response: responseType = {
       OK: false,
       error,
@@ -242,17 +184,9 @@ app.get('/teams/:key/logos', async (req, res) => {
   }
 });
 
-app.get('/teams/:key/:path', async (req, res) => {
+app.get('/teams/:key/pages/:path', async (req, res) => {
   try {
-    let response;
-    if (utilsteamstables.find((el) => el.link === req.params.path)) {
-      response = await teamspages(req.params.key, req.params.path);
-    } else {
-      response = {
-        OK: false,
-      };
-      res.status(444).send(response);
-    }
+    const response = await teamspages(req.params.key, req.params.path);
     res.send(response);
   } catch (error) {
     const response: responseType = {
