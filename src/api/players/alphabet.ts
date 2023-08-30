@@ -3,8 +3,7 @@ import axios from 'axios';
 import { utilsreformat, utilstablesscrapper } from '../../utils';
 import { responseType } from '../../@types/response';
 import { utilsalphabets } from '../../utils';
-import { dataPlayersAlphabetType } from '../../@types/data';
-import { PlayersAlphabetBodyType } from '../../@types/playersalphabet';
+import { dataTableType } from '../../@types/data';
 export async function playersalphabet(alphabet: string) {
   const response: responseType = {
     OK: true,
@@ -15,7 +14,7 @@ export async function playersalphabet(alphabet: string) {
   }
   const html = await axios.get('https://www.basketball-reference.com/players/' + alphabet);
   const $ = cheerio.load(utilsreformat(html.data));
-  const data: dataPlayersAlphabetType = {
+  const data: dataTableType = {
     table: null,
   };
   $('#players').each(async (_, element) => {

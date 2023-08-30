@@ -4,6 +4,8 @@ import { utilscommands } from './utilscommands';
 import { utilsplayerstables } from './utilsplayersatables';
 import { utilsdatems } from './utilsdatems';
 import { utilstablesscrapper } from './utilstablesscrapper';
+import { utilsteamstables } from './utilsteamstables';
+import { utilsgridscrapper } from './utilsgridscrapper';
 
 export {
   utilsreformat,
@@ -12,4 +14,6 @@ export {
   utilsplayerstables,
   utilsdatems,
   utilstablesscrapper,
+  utilsteamstables,
+  utilsgridscrapper,
 };

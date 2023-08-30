@@ -1,5 +1,6 @@
 import { ActualSeasonConferenceType } from './actualseason';
 import { ChartPlayersType, ChartType } from './chart';
+import { GridType } from './grid';
 import { TeamsLogosElementType } from './logos';
 import { PlayersAlphabetBodyType, PlayersAlphabetHeadersType } from './playersalphabet';
 import { PlayersAwardsType } from './playersawards';
@@ -20,10 +21,9 @@ export type dataType =
   | dataActualSeasonType
   | dataSearchType
   | dataPlayersListType
-  | dataPlayersAlphabetType
   | dataPlayersInfoType
-  | dataPlayersPagesType
-  | dataPlayersAwardsType
+  | dataTableType
+  | dataGridType
   | dataPlayersTransactionsType
   | dataPlayersContractType
   | dataPlayersFAQType
@@ -44,8 +44,6 @@ export type dataSearchType = SearchType[];
 
 export type dataPlayersListType = PlayersList[];
 
-export type dataPlayersAlphabetType = { table: TableType | null };
-
 export type dataPlayersInfoType = {
   title: string;
   stats: string[][];
@@ -57,14 +55,11 @@ export type dataPlayersInfoType = {
   links: PlayersInfoLinks;
 };
 
-export type dataPlayersPagesType = {
+export type dataTableType = {
   table: TableType | null;
 };
 
-export type dataPlayersAwardsType = {
-  caption: string;
-  rows: PlayersAwardsType[][];
-}[];
+export type dataGridType = { grid: GridType | null; caption: string };
 
 export type dataPlayersTransactionsType = PlayersTransactions[];
 

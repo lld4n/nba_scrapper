@@ -7,7 +7,7 @@ import {
   utilstablesscrapper,
 } from '../../utils';
 import { responseType } from '../../@types/response';
-import { dataPlayersPagesType } from '../../@types/data';
+import { dataTableType } from '../../@types/data';
 
 export async function playerspages(alphabet: string, path: string, key: string) {
   const response: responseType = {
@@ -25,7 +25,7 @@ export async function playerspages(alphabet: string, path: string, key: string) 
     response.OK = false;
     return response;
   }
-  const data: dataPlayersPagesType = {
+  const data: dataTableType = {
     table: null,
   };
   $('#' + key).each(async (_, element) => {

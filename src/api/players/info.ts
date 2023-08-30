@@ -72,8 +72,7 @@ export async function playersinfo(alphabet: string, path: string) {
             }
           }
         } else if (
-          $(elem).text().replace('▪', '').replace(':', '').replace(',', '').trim().length > 0 &&
-          !$(elem).hasClass('f-i')
+          $(elem).text().replace('▪', '').replace(':', '').replace(',', '').trim().length > 0
         ) {
           data.bio.push({
             type: $(elem).is('strong') ? 'bold' : 'text',

@@ -1,9 +1,8 @@
 import cheerio from 'cheerio';
 import axios from 'axios';
-import { utilsalphabets, utilsreformat } from '../../utils';
+import { utilsalphabets, utilsgridscrapper, utilsreformat } from '../../utils';
 import { responseType } from '../../@types/response';
-import { dataPlayersAwardsType } from '../../@types/data';
-import { PlayersAwardsType } from '../../@types/playersawards';
+import { dataGridType } from '../../@types/data';
 
 export async function playersawards(alphabet: string, path: string) {
   const response: responseType = {
@@ -21,41 +20,11 @@ export async function playersawards(alphabet: string, path: string) {
     response.OK = false;
     return response;
   }
-  const data: dataPlayersAwardsType = [];
-  $('#div_leaderboard div').each((_, element) => {
-    const dataBuf: {
-      caption: string;
-      rows: PlayersAwardsType[][];
-    } = {
-      caption: $('caption', element).text().trim(),
-      rows: [],
-    };
-    $('td', element).each((_, elem) => {
-      const dataBuf2: PlayersAwardsType[] = [];
-      const bold = Boolean($('strong', elem).html());
-      $(elem)
-        .contents()
-        .each((_, e) => {
-          dataBuf2.push({
-            bold,
-            text: $(e).text().trim(),
-            href: $(e).attr('href') || null,
-          });
-        });
-      $('strong', elem)
-        .contents()
-        .each((_, e) => {
-          dataBuf2.push({
-            bold,
-            text: $(e).text().trim(),
-            href: $(e).attr('href') || null,
-          });
-        });
-      dataBuf.rows.push(dataBuf2);
-    });
-    data.push(dataBuf);
+  const data: dataGridType = { caption: '', grid: null };
+  $('#div_leaderboard').each(async (_, element) => {
+    data.grid = await utilsgridscrapper($, element);
+    data.caption = 'Появление в списках лидеров, награды и почетные звания';
   });
-
   response.data = data;
   return response;
 }

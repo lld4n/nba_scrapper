@@ -16,9 +16,11 @@ import {
   teamsinfo,
   teamslist,
   teamslogos,
+  teamspages,
 } from './api';
 import { responseType } from './@types/response';
 import express from 'express';
+import { utilsteamstables } from './utils';
 
 const app = express();
 const PORT = 3000;
@@ -230,6 +232,27 @@ app.get('/teams/:key', async (req, res) => {
 app.get('/teams/:key/logos', async (req, res) => {
   try {
     const response = await teamslogos(req.params.key);
+    res.send(response);
+  } catch (error) {
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/teams/:key/:path', async (req, res) => {
+  try {
+    let response;
+    if (utilsteamstables.find((el) => el.link === req.params.path)) {
+      response = await teamspages(req.params.key, req.params.path);
+    } else {
+      response = {
+        OK: false,
+      };
+      res.status(444).send(response);
+    }
     res.send(response);
   } catch (error) {
     const response: responseType = {

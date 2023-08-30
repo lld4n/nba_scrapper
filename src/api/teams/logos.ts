@@ -2,7 +2,7 @@ import cheerio from 'cheerio';
 import axios from 'axios';
 import { utilscommands, utilsreformat } from '../../utils';
 import { responseType } from '../../@types/response';
-import { dataTeamsInfoType, dataTeamsLogosType } from '../../@types/data';
+import { dataTeamsLogosType } from '../../@types/data';
 import { TeamsLogosElementType } from '../../@types/logos';
 
 export async function teamslogos(key: string) {
