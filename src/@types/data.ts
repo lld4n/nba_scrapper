@@ -15,6 +15,7 @@ import { PlayersList } from './playerslist';
 import { PlayersTransactions } from './playerstransactions';
 import { SearchType } from './search';
 import { TableType } from './table';
+import { TeamsResultType } from './teamsresult';
 
 export type dataType =
   | string
@@ -33,7 +34,9 @@ export type dataType =
   | dataTeamsListType
   | dataTeamsInfoType
   | dataTeamsLogosType
-  | dataLogosType;
+  | dataLogosType
+  | dataTeamsResultType
+  | dataTeamsTransactionsType;
 
 export type dataActualSeasonType = {
   east: ActualSeasonConferenceType[][];
@@ -120,6 +123,14 @@ export type dataTeamsInfoType = {
 };
 
 export type dataTeamsLogosType = TeamsLogosElementType[];
+
+export type dataTeamsResultType = TeamsResultType[];
+
+export type dataTeamsTransactionsType = {
+  span: boolean;
+  href: string | null;
+  text: string;
+}[];
 
 export type dataLogosType = {
   src: string | null;

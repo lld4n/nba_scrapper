@@ -12,6 +12,7 @@ import { teamsinfo } from './teams/info';
 import { teamslogos } from './teams/logos';
 import { logos } from './logos';
 import { teamspages } from './teams/pages';
+import { teamsyears } from './teams/years';
 
 export {
   otheractualseason,
@@ -28,4 +29,5 @@ export {
   teamslogos,
   logos,
   teamspages,
+  teamsyears,
 };

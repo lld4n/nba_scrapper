@@ -7,7 +7,7 @@ export type MasType = {
 };
 export type MasTeamsType = {
   id: string;
-  type: 'table' | 'grid' | 'result' | 'faq' | 'coaches' | 'transactions' | 'chart';
+  type: 'table' | 'grid' | 'result' | 'faq' | 'coaches' | 'transactions';
   name: string;
   link: string;
   heading: string | null;
@@ -17,5 +17,6 @@ import { masplayers } from './masplayers';
 import { masalphabet } from './masalphabet';
 import { mascommands } from './mascommands';
 import { masteamspages } from './masteamspages';
+import { masteamsyears } from './masteamsyears';
 
-export { masplayers, masalphabet, mascommands, masteamspages };
+export { masplayers, masalphabet, mascommands, masteamspages, masteamsyears };

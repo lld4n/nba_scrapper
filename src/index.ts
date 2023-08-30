@@ -13,6 +13,7 @@ import {
   teamslist,
   teamslogos,
   teamspages,
+  teamsyears,
 } from './api';
 import { responseType } from './@types/response';
 import express from 'express';
@@ -189,6 +190,20 @@ app.get('/teams/:key/pages/:path', async (req, res) => {
     const response = await teamspages(req.params.key, req.params.path);
     res.send(response);
   } catch (error) {
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/teams/:key/years/:year/:path', async (req, res) => {
+  try {
+    const response = await teamsyears(req.params.key, req.params.year, req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
     const response: responseType = {
       OK: false,
       error,

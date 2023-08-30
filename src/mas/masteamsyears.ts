@@ -120,7 +120,7 @@ export const masteamsyears: MasTeamsType[] = [
     heading: null,
   },
   {
-    id: 'page_index',
+    id: 'transactions',
     type: 'transactions',
     name: 'Транзакции',
     link: '_transactions.html',
@@ -225,13 +225,6 @@ export const masteamsyears: MasTeamsType[] = [
     type: 'table',
     name: 'Стартовые составы.Плей-офф 2',
     link: '_start.html',
-    heading: null,
-  },
-  {
-    id: 'div_depth_chart',
-    type: 'chart',
-    name: 'Глубинная диаграмма',
-    link: '_depth.html',
     heading: null,
   },
   { id: 'refs-summary', type: 'table', name: 'Судьи', link: '_referees.html', heading: null },
