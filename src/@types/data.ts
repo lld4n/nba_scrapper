@@ -2,6 +2,8 @@ import { ActualSeasonConferenceType } from './actualseason';
 import { ChartPlayersType } from './chart';
 import { GamesMiniType, GamesType, PrevNextType } from './games';
 import { GridType } from './grid';
+import { LeaguesType } from './leagues';
+import { LeaguesRecordType } from './leaguesrecord';
 import { TeamsLogosElementType } from './logos';
 import { OpponentType } from './opponent';
 import { PBPType } from './pbp';
@@ -45,7 +47,9 @@ export type dataType =
   | dataBoxscoresContentType
   | dataBoxscoresPBPType
   | dataBoxscoresShotChartType
-  | dataBoxscoresPlusMinusType;
+  | dataBoxscoresPlusMinusType
+  | dataLeaguesType
+  | dataLeaguesRecordType;
 
 export type dataActualSeasonType = {
   east: ActualSeasonConferenceType[][];
@@ -183,3 +187,7 @@ export type dataBoxscoresPlusMinusType = {
   header: PlusMinusHeaderType[];
   opponents: PlusMinusType[];
 };
+
+export type dataLeaguesType = LeaguesType[][];
+
+export type dataLeaguesRecordType = LeaguesRecordType[][];

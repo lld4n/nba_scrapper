@@ -6,7 +6,7 @@
 - [x] teams
 - [ ] seasons
 - [ ] leaders
-- [ ] scores
+- [x] scores
 - [ ] draft
 - [ ] schedules
 - [ ] coaches

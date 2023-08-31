@@ -5,6 +5,8 @@ import {
   boxscorespbp,
   boxscoresplusminus,
   boxscoresshotchart,
+  leagueslist,
+  leaguespages,
   logos,
   otheractualseason,
   othersearch,
@@ -291,6 +293,34 @@ app.get('/boxscores/shot-chart/:path', async (req, res) => {
 app.get('/boxscores/plus-minus/:path', async (req, res) => {
   try {
     const response = await boxscoresplusminus(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/leagues/list', async (req, res) => {
+  try {
+    const response = await leagueslist();
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/leagues/pages/:path', async (req, res) => {
+  try {
+    const response = await leaguespages(req.params.path);
     res.send(response);
   } catch (error) {
     console.log(error);
