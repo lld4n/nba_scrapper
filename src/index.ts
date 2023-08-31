@@ -1,4 +1,10 @@
 import {
+  boxscorescontent,
+  boxscoresinfo,
+  boxscoresmeta,
+  boxscorespbp,
+  boxscoresplusminus,
+  boxscoresshotchart,
   logos,
   otheractualseason,
   othersearch,
@@ -201,6 +207,90 @@ app.get('/teams/:key/pages/:path', async (req, res) => {
 app.get('/teams/:key/years/:year/:path', async (req, res) => {
   try {
     const response = await teamsyears(req.params.key, req.params.year, req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/boxscores/info/:path', async (req, res) => {
+  try {
+    const response = await boxscoresinfo(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/boxscores/meta/:path', async (req, res) => {
+  try {
+    const response = await boxscoresmeta(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/boxscores/content/:path', async (req, res) => {
+  try {
+    const response = await boxscorescontent(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/boxscores/pbp/:path', async (req, res) => {
+  try {
+    const response = await boxscorespbp(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/boxscores/shot-chart/:path', async (req, res) => {
+  try {
+    const response = await boxscoresshotchart(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/boxscores/plus-minus/:path', async (req, res) => {
+  try {
+    const response = await boxscoresplusminus(req.params.path);
     res.send(response);
   } catch (error) {
     console.log(error);

@@ -1,9 +1,10 @@
 import { ActualSeasonConferenceType } from './actualseason';
-import { ChartPlayersType, ChartType } from './chart';
+import { ChartPlayersType } from './chart';
+import { GamesMiniType, GamesType, PrevNextType } from './games';
 import { GridType } from './grid';
 import { TeamsLogosElementType } from './logos';
-import { PlayersAlphabetBodyType, PlayersAlphabetHeadersType } from './playersalphabet';
-import { PlayersAwardsType } from './playersawards';
+import { OpponentType } from './opponent';
+import { PBPType } from './pbp';
 import {
   PlayersInfoBio,
   PlayersInfoJersies,
@@ -13,7 +14,9 @@ import {
 } from './playersinfo';
 import { PlayersList } from './playerslist';
 import { PlayersTransactions } from './playerstransactions';
+import { PlusMinusHeaderType, PlusMinusType } from './plusminus';
 import { SearchType } from './search';
+import { ShotChartType } from './shotchart';
 import { TableType } from './table';
 import { TeamsResultType } from './teamsresult';
 
@@ -36,7 +39,13 @@ export type dataType =
   | dataTeamsLogosType
   | dataLogosType
   | dataTeamsResultType
-  | dataTeamsTransactionsType;
+  | dataTeamsTransactionsType
+  | dataBoxscoresInfoType
+  | dataBoxscoresMetaType
+  | dataBoxscoresContentType
+  | dataBoxscoresPBPType
+  | dataBoxscoresShotChartType
+  | dataBoxscoresPlusMinusType;
 
 export type dataActualSeasonType = {
   east: ActualSeasonConferenceType[][];
@@ -136,4 +145,41 @@ export type dataLogosType = {
   src: string | null;
   name: string;
   desc: string[];
+};
+
+export type dataBoxscoresInfoType = {
+  east: {
+    table: TableType | null;
+  };
+  west: {
+    table: TableType | null;
+  };
+  games: GamesType[];
+  curdate: string;
+  prev: PrevNextType;
+  next: PrevNextType;
+};
+
+export type dataBoxscoresMetaType = {
+  gamesmini: GamesMiniType[];
+  gamestitle: string;
+  date: string;
+  arena: string;
+  exactdate: string;
+  opponents: OpponentType[];
+  hrefs: string[];
+};
+
+export type dataBoxscoresContentType = TableType[];
+
+export type dataBoxscoresPBPType = {
+  summary: TableType[];
+  pbp: PBPType;
+};
+
+export type dataBoxscoresShotChartType = ShotChartType[];
+
+export type dataBoxscoresPlusMinusType = {
+  header: PlusMinusHeaderType[];
+  opponents: PlusMinusType[];
 };

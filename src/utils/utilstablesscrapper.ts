@@ -7,6 +7,7 @@ export async function utilstablesscrapper($: cheerio.Root, celem: cheerio.Elemen
     body: [],
     foot: [],
   };
+  table.caption = $('caption', celem).text().replace('Table', '').trim();
   $('thead tr', celem).each((_, element) => {
     const tableRow: TableHeadersType[] = [];
     $('th, td', element).each((_, elem) => {

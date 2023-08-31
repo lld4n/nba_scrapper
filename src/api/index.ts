@@ -13,6 +13,12 @@ import { teamslogos } from './teams/logos';
 import { logos } from './logos';
 import { teamspages } from './teams/pages';
 import { teamsyears } from './teams/years';
+import { boxscoresinfo } from './boxscores/info';
+import { boxscoresmeta } from './boxscores/meta';
+import { boxscorescontent } from './boxscores/content';
+import { boxscorespbp } from './boxscores/pbp';
+import { boxscoresshotchart } from './boxscores/shot-chart';
+import { boxscoresplusminus } from './boxscores/plus-minus';
 
 export {
   otheractualseason,
@@ -30,4 +36,10 @@ export {
   logos,
   teamspages,
   teamsyears,
+  boxscoresinfo,
+  boxscoresmeta,
+  boxscorescontent,
+  boxscorespbp,
+  boxscoresshotchart,
+  boxscoresplusminus,
 };

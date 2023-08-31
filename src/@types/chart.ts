@@ -12,3 +12,11 @@ export type ChartPlayersType = ChartType & {
   info: string;
   check: string;
 };
+
+export type ChartBoxscoresType = ChartType & {
+  quarter: string;
+  player: string;
+  time: string;
+  res: string;
+  command: string;
+};
