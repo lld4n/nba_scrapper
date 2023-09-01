@@ -7,6 +7,7 @@ import {
   boxscoresshotchart,
   leagueslist,
   leaguespages,
+  leaguesyears,
   logos,
   otheractualseason,
   othersearch,
@@ -321,6 +322,20 @@ app.get('/leagues/list', async (req, res) => {
 app.get('/leagues/pages/:path', async (req, res) => {
   try {
     const response = await leaguespages(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/leagues/years/:year/:path', async (req, res) => {
+  try {
+    const response = await leaguesyears(req.params.year, req.params.path);
     res.send(response);
   } catch (error) {
     console.log(error);

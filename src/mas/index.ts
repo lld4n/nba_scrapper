@@ -13,6 +13,14 @@ export type MasLeaguesPagesType = {
   link: string;
   heading: string | null;
 };
+
+export type MasLeaguesYearsType = {
+  id: string;
+  type: 'table' | 'grid' | 'schedule' | 'transactions' | 'tablep';
+  name: string;
+  link: string;
+};
+
 export type MasTeamsType = {
   id: string;
   type: 'table' | 'grid' | 'result' | 'faq' | 'coaches' | 'transactions';
@@ -27,5 +35,14 @@ import { mascommands } from './mascommands';
 import { masteamspages } from './masteamspages';
 import { masteamsyears } from './masteamsyears';
 import { masleaguespages } from './masleaguespages';
+import { masleaguesyears } from './masleaguesyears';
 
-export { masplayers, masalphabet, mascommands, masteamspages, masteamsyears, masleaguespages };
+export {
+  masplayers,
+  masalphabet,
+  mascommands,
+  masteamspages,
+  masteamsyears,
+  masleaguespages,
+  masleaguesyears,
+};

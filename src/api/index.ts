@@ -21,6 +21,7 @@ import { boxscoresshotchart } from './boxscores/shot-chart';
 import { boxscoresplusminus } from './boxscores/plus-minus';
 import { leagueslist } from './leagues/list';
 import { leaguespages } from './leagues/pages';
+import { leaguesyears } from './leagues/years';
 
 export {
   otheractualseason,
@@ -46,4 +47,5 @@ export {
   boxscoresplusminus,
   leagueslist,
   leaguespages,
+  leaguesyears,
 };

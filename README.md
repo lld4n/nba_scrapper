@@ -1,12 +1,13 @@
-# ... ... ... ... ...
+# Tsukuyomi Dream
 
 - [x] search
 - [x] actualseason
 - [x] players
 - [x] teams
+- [x] scores
+- [x] leagues
 - [ ] seasons
 - [ ] leaders
-- [x] scores
 - [ ] draft
 - [ ] schedules
 - [ ] coaches

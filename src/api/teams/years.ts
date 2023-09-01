@@ -8,7 +8,7 @@ import {
   dataPlayersFAQType,
   dataTableType,
   dataTeamsResultType,
-  dataTeamsTransactionsType,
+  dataTransactionsType,
 } from '../../@types/data';
 import { TeamsResultType } from '../../@types/teamsresult';
 
@@ -112,7 +112,7 @@ export async function teamsyears(key: string, year: string, path: string) {
     });
     response.data = data;
   } else if (telement.type === 'transactions') {
-    const data: dataTeamsTransactionsType = [];
+    const data: dataTransactionsType = [];
     $('.page_index li').each((_, element) => {
       $(element)
         .contents()

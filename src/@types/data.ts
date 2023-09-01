@@ -41,7 +41,7 @@ export type dataType =
   | dataTeamsLogosType
   | dataLogosType
   | dataTeamsResultType
-  | dataTeamsTransactionsType
+  | dataTransactionsType
   | dataBoxscoresInfoType
   | dataBoxscoresMetaType
   | dataBoxscoresContentType
@@ -49,7 +49,9 @@ export type dataType =
   | dataBoxscoresShotChartType
   | dataBoxscoresPlusMinusType
   | dataLeaguesType
-  | dataLeaguesRecordType;
+  | dataLeaguesRecordType
+  | dataLeaguesScheduleType
+  | dataLeaguesTablePType;
 
 export type dataActualSeasonType = {
   east: ActualSeasonConferenceType[][];
@@ -139,7 +141,7 @@ export type dataTeamsLogosType = TeamsLogosElementType[];
 
 export type dataTeamsResultType = TeamsResultType[];
 
-export type dataTeamsTransactionsType = {
+export type dataTransactionsType = {
   span: boolean;
   href: string | null;
   text: string;
@@ -191,3 +193,10 @@ export type dataBoxscoresPlusMinusType = {
 export type dataLeaguesType = LeaguesType[][];
 
 export type dataLeaguesRecordType = LeaguesRecordType[][];
+
+export type dataLeaguesScheduleType = {
+  hrefs: { href: string; text: string }[];
+  table: TableType | null;
+};
+
+export type dataLeaguesTablePType = { list: { href: string; text: string }[]; caption: string };
