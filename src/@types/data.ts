@@ -51,7 +51,8 @@ export type dataType =
   | dataLeaguesType
   | dataLeaguesRecordType
   | dataLeaguesScheduleType
-  | dataLeaguesTablePType;
+  | dataLeaguesTablePType
+  | dataCoachesTableType;
 
 export type dataActualSeasonType = {
   east: ActualSeasonConferenceType[][];
@@ -200,3 +201,8 @@ export type dataLeaguesScheduleType = {
 };
 
 export type dataLeaguesTablePType = { list: { href: string; text: string }[]; caption: string };
+
+export type dataCoachesTableType = {
+  tables: TableType[];
+  transactions: { text: string; href: string | null; bold: boolean }[];
+};

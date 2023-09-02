@@ -5,6 +5,9 @@ import {
   boxscorespbp,
   boxscoresplusminus,
   boxscoresshotchart,
+  coacheslist,
+  draftlist,
+  draftpages,
   leagueslist,
   leaguespages,
   leaguesyears,
@@ -18,6 +21,7 @@ import {
   playerspages,
   playersshooting,
   playerssplits,
+  playoffslist,
   teamsinfo,
   teamslist,
   teamslogos,
@@ -336,6 +340,76 @@ app.get('/leagues/pages/:path', async (req, res) => {
 app.get('/leagues/years/:year/:path', async (req, res) => {
   try {
     const response = await leaguesyears(req.params.year, req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/draft/list', async (req, res) => {
+  try {
+    const response = await draftlist();
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/draft/:path', async (req, res) => {
+  try {
+    const response = await draftpages(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/draft/:path', async (req, res) => {
+  try {
+    const response = await draftpages(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/coaches/:path', async (req, res) => {
+  try {
+    const response = await coacheslist(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/playoffs/list', async (req, res) => {
+  try {
+    const response = await playoffslist();
     res.send(response);
   } catch (error) {
     console.log(error);

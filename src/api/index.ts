@@ -22,6 +22,10 @@ import { boxscoresplusminus } from './boxscores/plus-minus';
 import { leagueslist } from './leagues/list';
 import { leaguespages } from './leagues/pages';
 import { leaguesyears } from './leagues/years';
+import { draftlist } from './draft/list';
+import { draftpages } from './draft/pages';
+import { coacheslist } from './coaches/list';
+import { playoffslist } from './playoffs/list';
 
 export {
   otheractualseason,
@@ -48,4 +52,8 @@ export {
   leagueslist,
   leaguespages,
   leaguesyears,
+  draftlist,
+  draftpages,
+  coacheslist,
+  playoffslist,
 };
