@@ -6,10 +6,10 @@
 - [x] teams
 - [x] scores
 - [x] leagues
-- [ ] leaders
 - [x] draft
 - [x] coaches
-- [ ] playoffs
+- [x] playoffs
+- [ ] leaders
 - [ ] all-star
 
 потихоньку пишу **REST API**, который собирает данные с **basketball-conference**, **bing.images** ...

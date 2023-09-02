@@ -21,7 +21,11 @@ import {
   playerspages,
   playersshooting,
   playerssplits,
+  playoffsfinalpart,
   playoffslist,
+  playoffsmeta,
+  playoffspages,
+  playoffsyears,
   teamsinfo,
   teamslist,
   teamslogos,
@@ -410,6 +414,62 @@ app.get('/coaches/:path', async (req, res) => {
 app.get('/playoffs/list', async (req, res) => {
   try {
     const response = await playoffslist();
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/playoffs/finalpart', async (req, res) => {
+  try {
+    const response = await playoffsfinalpart();
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/playoffs/years/:year/:path', async (req, res) => {
+  try {
+    const response = await playoffsyears(req.params.year, req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/playoffs/meta/:path', async (req, res) => {
+  try {
+    const response = await playoffsmeta(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/playoffs/pages/:path', async (req, res) => {
+  try {
+    const response = await playoffspages(req.params.path);
     res.send(response);
   } catch (error) {
     console.log(error);

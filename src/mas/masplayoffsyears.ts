@@ -1,0 +1,60 @@
+import { MasPlayoffsYears } from 'mas';
+
+export const masplayoffsyears: MasPlayoffsYears[] = [
+  { type: 'table', id: 'per_game-team', name: 'За игру.Команда', link: '.html' },
+  { type: 'table', id: 'per_game-opponent', name: 'За игру.Оппонент', link: '.html' },
+  { type: 'table', id: 'totals-team', name: 'Итоги.Команда', link: '.html' },
+  { type: 'table', id: 'totals-opponent', name: 'Итоги.Оппонент', link: '.html' },
+  { type: 'table', id: 'per_poss-team', name: 'За 100 владений мячом.Команда', link: '.html' },
+  { type: 'table', id: 'per_poss-opponent', name: 'За 100 владений мячом.Оппонент', link: '.html' },
+  { type: 'table', id: 'advanced-team', name: 'Дополнительно', link: '.html' },
+  { type: 'table', id: 'shooting-team', name: 'Броски.Команда', link: '.html' },
+  { type: 'table', id: 'shooting-opponent', name: 'Броски.Оппонент', link: '.html' },
+  { type: 'grid', id: 'div_leaders', name: 'Плей-офф лидеры', link: '.html' },
+  {
+    type: 'table',
+    id: 'expanded_standings',
+    name: 'Расширенная турнирная таблица',
+    link: '_standings.html',
+  },
+  { type: 'table', id: 'team_vs_team', name: 'Команда против команды', link: '_standings.html' },
+  { type: 'table', id: 'schedule', name: 'Расписание плей-офф', link: '_games.html' },
+  { type: 'grid', id: 'div_leaders', name: 'Лидеры плей-офф', link: '_leaders.html' },
+  { type: 'table', id: 'totals_stats', name: 'Статистика игроков.Итоги', link: '_totals.html' },
+  {
+    type: 'table',
+    id: 'per_game_stats',
+    name: 'Статистика игроков.За игру',
+    link: '_per_game.html',
+  },
+  {
+    type: 'table',
+    id: 'per_minute_stats',
+    name: 'Статистика игроков.За 36 минут',
+    link: '_per_minute.html',
+  },
+  {
+    type: 'table',
+    id: 'per_poss_stats',
+    name: 'Статистика игроков.За 100 владений мячом',
+    link: '_per_poss.html',
+  },
+  {
+    type: 'table',
+    id: 'advanced_stats',
+    name: 'Статистика игроков.Дополнительно',
+    link: '_advanced.html',
+  },
+  {
+    type: 'table',
+    id: 'pbp_stats',
+    name: 'Статистика игроков.Игра за игру',
+    link: '_play-by-play.html',
+  },
+  {
+    type: 'table',
+    id: 'shooting_stats',
+    name: 'Статистика игроков.Броски',
+    link: '_shooting.html',
+  },
+];

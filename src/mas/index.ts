@@ -21,6 +21,13 @@ export type MasLeaguesYearsType = {
   link: string;
 };
 
+export type MasPlayoffsYears = {
+  id: string;
+  type: 'table' | 'grid';
+  name: string;
+  link: string;
+};
+
 export type MasTeamsType = {
   id: string;
   type: 'table' | 'grid' | 'result' | 'faq' | 'coaches' | 'transactions';
@@ -36,6 +43,7 @@ import { masteamspages } from './masteamspages';
 import { masteamsyears } from './masteamsyears';
 import { masleaguespages } from './masleaguespages';
 import { masleaguesyears } from './masleaguesyears';
+import { masplayoffsfinals } from './masplayoffsfinals';
 
 export {
   masplayers,
@@ -45,4 +53,5 @@ export {
   masteamsyears,
   masleaguespages,
   masleaguesyears,
+  masplayoffsfinals,
 };

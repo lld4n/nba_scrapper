@@ -16,6 +16,7 @@ import {
 } from './playersinfo';
 import { PlayersList } from './playerslist';
 import { PlayersTransactions } from './playerstransactions';
+import { PlayoffsFinalPartType } from './playoffsfinalpart';
 import { PlusMinusHeaderType, PlusMinusType } from './plusminus';
 import { SearchType } from './search';
 import { ShotChartType } from './shotchart';
@@ -52,7 +53,10 @@ export type dataType =
   | dataLeaguesRecordType
   | dataLeaguesScheduleType
   | dataLeaguesTablePType
-  | dataCoachesTableType;
+  | dataCoachesTableType
+  | dataPlayoffsFinalPartType
+  | dataPlayoffsMetaType
+  | dataPlayoffsPagesType;
 
 export type dataActualSeasonType = {
   east: ActualSeasonConferenceType[][];
@@ -205,4 +209,17 @@ export type dataLeaguesTablePType = { list: { href: string; text: string }[]; ca
 export type dataCoachesTableType = {
   tables: TableType[];
   transactions: { text: string; href: string | null; bold: boolean }[];
+};
+
+export type dataPlayoffsFinalPartType = PlayoffsFinalPartType[];
+
+export type dataPlayoffsMetaType = {
+  heading: string;
+  content: { text: string; href: string | null; bold: boolean }[];
+};
+
+export type dataPlayoffsPagesType = {
+  finalimg: string | null;
+  gamesmini: GamesMiniType[];
+  tables: TableType[];
 };

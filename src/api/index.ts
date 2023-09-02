@@ -26,6 +26,10 @@ import { draftlist } from './draft/list';
 import { draftpages } from './draft/pages';
 import { coacheslist } from './coaches/list';
 import { playoffslist } from './playoffs/list';
+import { playoffsfinalpart } from './playoffs/finalpart';
+import { playoffsyears } from './playoffs/years';
+import { playoffsmeta } from './playoffs/meta';
+import { playoffspages } from './playoffs/pages';
 
 export {
   otheractualseason,
@@ -56,4 +60,8 @@ export {
   draftpages,
   coacheslist,
   playoffslist,
+  playoffsfinalpart,
+  playoffsyears,
+  playoffsmeta,
+  playoffspages,
 };
