@@ -9,7 +9,10 @@
 - [x] draft
 - [x] coaches
 - [x] playoffs
-- [ ] leaders
 - [ ] all-star
+- [ ] awards
+- [ ] executives
+- [ ] referees
+- [ ] leaders
 
 потихоньку пишу **REST API**, который собирает данные с **basketball-conference**, **bing.images** ...
