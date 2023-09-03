@@ -1,6 +1,6 @@
-import { MasPlayoffsYears } from 'mas';
+import { MasPlayoffsYearsType } from 'mas';
 
-export const masplayoffsyears: MasPlayoffsYears[] = [
+export const masplayoffsyears: MasPlayoffsYearsType[] = [
   { type: 'table', id: 'per_game-team', name: 'За игру.Команда', link: '.html' },
   { type: 'table', id: 'per_game-opponent', name: 'За игру.Оппонент', link: '.html' },
   { type: 'table', id: 'totals-team', name: 'Итоги.Команда', link: '.html' },

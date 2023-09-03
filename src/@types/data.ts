@@ -56,7 +56,9 @@ export type dataType =
   | dataCoachesTableType
   | dataPlayoffsFinalPartType
   | dataPlayoffsMetaType
-  | dataPlayoffsPagesType;
+  | dataPlayoffsPagesType
+  | dataAllStarMetaType
+  | dataTableMasType;
 
 export type dataActualSeasonType = {
   east: ActualSeasonConferenceType[][];
@@ -223,3 +225,11 @@ export type dataPlayoffsPagesType = {
   gamesmini: GamesMiniType[];
   tables: TableType[];
 };
+
+export type dataAllStarMetaType = {
+  img: string;
+  content: { text: string; href: string | null; bold: boolean }[];
+  year: string;
+};
+
+export type dataTableMasType = TableType[];

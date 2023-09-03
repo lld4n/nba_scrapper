@@ -30,6 +30,14 @@ import { playoffsfinalpart } from './playoffs/finalpart';
 import { playoffsyears } from './playoffs/years';
 import { playoffsmeta } from './playoffs/meta';
 import { playoffspages } from './playoffs/pages';
+import { allstarmeta } from './allstar/meta';
+import { allstarlist } from './allstar/list';
+import { allstarinfo } from './allstar/info';
+import { allstarvoting } from './allstar/voting';
+import { allstarleadercareer } from './allstar/leaderscareer';
+import { allstarleadersingle } from './allstar/leaderssingle';
+import { allstarcontests } from './allstar/contests';
+import { allstarcareerstats } from './allstar/careerstats';
 
 export {
   otheractualseason,
@@ -64,4 +72,12 @@ export {
   playoffsyears,
   playoffsmeta,
   playoffspages,
+  allstarmeta,
+  allstarlist,
+  allstarinfo,
+  allstarvoting,
+  allstarleadercareer,
+  allstarleadersingle,
+  allstarcontests,
+  allstarcareerstats,
 };

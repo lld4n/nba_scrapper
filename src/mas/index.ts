@@ -21,7 +21,7 @@ export type MasLeaguesYearsType = {
   link: string;
 };
 
-export type MasPlayoffsYears = {
+export type MasPlayoffsYearsType = {
   id: string;
   type: 'table' | 'grid';
   name: string;
@@ -44,6 +44,7 @@ import { masteamsyears } from './masteamsyears';
 import { masleaguespages } from './masleaguespages';
 import { masleaguesyears } from './masleaguesyears';
 import { masplayoffsfinals } from './masplayoffsfinals';
+import { masallstarlogos } from './masallstarlogos';
 
 export {
   masplayers,
@@ -54,4 +55,5 @@ export {
   masleaguespages,
   masleaguesyears,
   masplayoffsfinals,
+  masallstarlogos,
 };

@@ -9,7 +9,7 @@
 - [x] draft
 - [x] coaches
 - [x] playoffs
-- [ ] all-star
+- [x] all-star
 - [ ] awards
 - [ ] executives
 - [ ] referees

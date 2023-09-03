@@ -1,4 +1,12 @@
 import {
+  allstarcareerstats,
+  allstarcontests,
+  allstarinfo,
+  allstarleadercareer,
+  allstarleadersingle,
+  allstarlist,
+  allstarmeta,
+  allstarvoting,
   boxscorescontent,
   boxscoresinfo,
   boxscoresmeta,
@@ -470,6 +478,118 @@ app.get('/playoffs/meta/:path', async (req, res) => {
 app.get('/playoffs/pages/:path', async (req, res) => {
   try {
     const response = await playoffspages(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/allstar/list', async (req, res) => {
+  try {
+    const response = await allstarlist();
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/allstar/leaderssingle', async (req, res) => {
+  try {
+    const response = await allstarleadersingle();
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/allstar/leaderscareer', async (req, res) => {
+  try {
+    const response = await allstarleadercareer();
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/allstar/contents', async (req, res) => {
+  try {
+    const response = await allstarcontests();
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/allstar/careerstats', async (req, res) => {
+  try {
+    const response = await allstarcareerstats();
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/allstar/meta/:path', async (req, res) => {
+  try {
+    const response = await allstarmeta(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/allstar/info/:path', async (req, res) => {
+  try {
+    const response = await allstarinfo(req.params.path);
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    const response: responseType = {
+      OK: false,
+      error,
+    };
+    res.status(500).send(response);
+  }
+});
+
+app.get('/allstar/voting/:path', async (req, res) => {
+  try {
+    const response = await allstarvoting(req.params.path);
     res.send(response);
   } catch (error) {
     console.log(error);
