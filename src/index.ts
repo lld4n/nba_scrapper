@@ -614,7 +614,6 @@ app.get('/logos/:key', async (req: Request, res: Response) => {
 });
 
 app.use((req: Request, res: Response) => {
-  // console.log(req.path);
   const response: responseType = {
     OK: false,
   };
