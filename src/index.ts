@@ -42,7 +42,6 @@ import {
 } from './api';
 import { responseType } from './@types/response';
 import express, { Request, Response } from 'express';
-import { masteamspages } from './mas';
 
 const app = express();
 const PORT = 3000;
