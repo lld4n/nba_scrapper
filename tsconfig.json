@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "module": "NodeNext",
+    "esModuleInterop": true,
+    "module": "commonjs",
     "baseUrl": "src",
     "outDir": "dist",
     "sourceMap": true,
     "noImplicitAny": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
