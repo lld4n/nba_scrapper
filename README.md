@@ -16,3 +16,10 @@
 - [ ] leaders
 
 потихоньку пишу **REST API**, который собирает данные с **basketball-conference**, **bing.images** ...
+
+| API                      | Explanation                                                               |
+| ------------------------ | ------------------------------------------------------------------------- |
+| `api/other/actualseason` | Возвращает статистику текущего сезона.                                    |
+|                          | `east` `{type - link.wins.loses, href - string.null, text - string }[][]` |
+|                          |                                                                           |
+| `api/other/search`       | Возвращает результаты поиска                                              |
