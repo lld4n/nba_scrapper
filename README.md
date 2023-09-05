@@ -153,7 +153,13 @@
     id: 'adj_shooting',
     name: 'Скорректированная стрельба',
   },
-  { heading: null, link: 'pbp', type: 'table', id: 'pbp', name: 'Игра за игру.Регулярный сезон' },
+  {
+    heading: null,
+    link: 'pbp',
+    type: 'table',
+    id: 'pbp',
+    name: 'Игра за игру.Регулярный сезон',
+  },
   {
     heading: null,
     link: 'playoffs_pbp',
@@ -196,7 +202,13 @@
     id: 'playoffs-series',
     name: 'Серия плей-офф',
   },
-  { heading: null, link: 'all_star', type: 'table', id: 'all_star', name: 'Матчи всех звезд' },
+  {
+    heading: null,
+    link: 'all_star',
+    type: 'table',
+    id: 'all_star',
+    name: 'Матчи всех звезд',
+  },
   {
     heading: 'Наиболее схожая дуга производительности',
     link: 'sims-thru',
@@ -218,7 +230,13 @@
     id: 'all_college_stats',
     name: 'Статистика колледжа',
   },
-  { heading: null, link: 'all_salaries', type: 'table', id: 'all_salaries', name: 'Зарплаты' },
+  {
+    heading: null,
+    link: 'all_salaries',
+    type: 'table',
+    id: 'all_salaries',
+    name: 'Зарплаты',
+  },
   {
     heading: null,
     link: 'awards',
@@ -653,7 +671,13 @@
     name: 'Номера униформ',
     link: 'numbers.html',
   },
-  { heading: null, id: 'head2head', type: 'table', name: 'Взаимодействие', link: 'head2head.html' },
+  {
+    heading: null,
+    id: 'head2head',
+    type: 'table',
+    name: 'Взаимодействие',
+    link: 'head2head.html',
+  },
 ];
 ```
 
@@ -668,7 +692,13 @@
     link: '.html',
     heading: 'Высота столбика - перевес',
   },
-  { id: 'roster', type: 'table', name: 'Реестр', link: '.html', heading: null },
+  {
+    id: 'roster',
+    type: 'table',
+    name: 'Реестр',
+    link: '.html',
+    heading: null,
+  },
   {
     id: 'div_assistant_coaches',
     type: 'coaches',
@@ -684,8 +714,20 @@
     heading:
       'Рейтинги приведены по играм (за исключением MP, которые являются общими) и отсортированы по убыванию (за исключением TOV и PF); рейтинги соперников перевернуты; расчеты за год/год также приведены по играм',
   },
-  { id: 'team_misc', type: 'table', name: 'Team misc', link: '.html', heading: null },
-  { id: 'per_game', type: 'table', name: 'За игру.Регулярный сезон', link: '.html', heading: null },
+  {
+    id: 'team_misc',
+    type: 'table',
+    name: 'Team misc',
+    link: '.html',
+    heading: null,
+  },
+  {
+    id: 'per_game',
+    type: 'table',
+    name: 'За игру.Регулярный сезон',
+    link: '.html',
+    heading: null,
+  },
   {
     id: 'playoffs_per_game',
     type: 'table',
@@ -693,8 +735,20 @@
     link: '.html',
     heading: null,
   },
-  { id: 'totals', type: 'table', name: 'Итоги.Регулярный сезон', link: '.html', heading: null },
-  { id: 'playoffs_totals', type: 'table', name: 'Итоги.Плей-офф', link: '.html', heading: null },
+  {
+    id: 'totals',
+    type: 'table',
+    name: 'Итоги.Регулярный сезон',
+    link: '.html',
+    heading: null,
+  },
+  {
+    id: 'playoffs_totals',
+    type: 'table',
+    name: 'Итоги.Плей-офф',
+    link: '.html',
+    heading: null,
+  },
   {
     id: 'per_minute',
     type: 'table',
@@ -744,9 +798,27 @@
     link: '.html',
     heading: null,
   },
-  { id: 'shooting', type: 'table', name: 'Броски.Регулярный сезон', link: '.html', heading: null },
-  { id: 'playoffs_shooting', type: 'table', name: 'Броски.Плей-офф', link: '.html', heading: null },
-  { id: 'pbp', type: 'table', name: 'Игра за игру.Регулярный сезон', link: '.html', heading: null },
+  {
+    id: 'shooting',
+    type: 'table',
+    name: 'Броски.Регулярный сезон',
+    link: '.html',
+    heading: null,
+  },
+  {
+    id: 'playoffs_shooting',
+    type: 'table',
+    name: 'Броски.Плей-офф',
+    link: '.html',
+    heading: null,
+  },
+  {
+    id: 'pbp',
+    type: 'table',
+    name: 'Игра за игру.Регулярный сезон',
+    link: '.html',
+    heading: null,
+  },
   {
     id: 'playoffs_pbp',
     type: 'table',
@@ -762,9 +834,27 @@
     heading:
       'Включает в себя статистику за весь сезон для всех игроков, которые проводили время на площадке в регулярном чемпионате или плей-офф.',
   },
-  { id: 'salaries2', type: 'table', name: 'Заработная плата', link: '.html', heading: null },
-  { id: 'draft-rights', type: 'table', name: 'Драфт', link: '.html', heading: null },
-  { id: 'div_faq', type: 'faq', name: 'Часто задаваемые вопросы', link: '.html', heading: null },
+  {
+    id: 'salaries2',
+    type: 'table',
+    name: 'Заработная плата',
+    link: '.html',
+    heading: null,
+  },
+  {
+    id: 'draft-rights',
+    type: 'table',
+    name: 'Драфт',
+    link: '.html',
+    heading: null,
+  },
+  {
+    id: 'div_faq',
+    type: 'faq',
+    name: 'Часто задаваемые вопросы',
+    link: '.html',
+    heading: null,
+  },
   {
     id: 'games',
     type: 'table',
@@ -800,7 +890,13 @@
     link: '/gamelog-advanced/',
     heading: 'Обороты не включают командные обороты',
   },
-  { id: 'team_splits', type: 'table', name: 'Разделение команд', link: '/splits/', heading: null },
+  {
+    id: 'team_splits',
+    type: 'table',
+    name: 'Разделение команд',
+    link: '/splits/',
+    heading: null,
+  },
   {
     id: 'lineups_5-man_',
     type: 'table',
@@ -857,8 +953,20 @@
     link: '/lineups/',
     heading: null,
   },
-  { id: 'on_off', type: 'table', name: 'On/Off.Регулярный сезон', link: '/on-off/', heading: null },
-  { id: 'on_off_p', type: 'table', name: 'On/Off.Плей-офф', link: '/on-off/', heading: null },
+  {
+    id: 'on_off',
+    type: 'table',
+    name: 'On/Off.Регулярный сезон',
+    link: '/on-off/',
+    heading: null,
+  },
+  {
+    id: 'on_off_p',
+    type: 'table',
+    name: 'On/Off.Плей-офф',
+    link: '/on-off/',
+    heading: null,
+  },
   {
     id: 'starting_lineups_po0',
     type: 'table',
@@ -887,7 +995,13 @@
     link: '_start.html',
     heading: null,
   },
-  { id: 'refs-summary', type: 'table', name: 'Судьи', link: '_referees.html', heading: null },
+  {
+    id: 'refs-summary',
+    type: 'table',
+    name: 'Судьи',
+    link: '_referees.html',
+    heading: null,
+  },
 ];
 ```
 
@@ -1204,7 +1318,12 @@
     name: 'Лидеры сезона',
     link: '_leaders.html',
   },
-  { id: 'NBA_coaches', type: 'table', name: 'Тренеры', link: '_coaches.html' },
+  {
+    id: 'NBA_coaches',
+    type: 'table',
+    name: 'Тренеры',
+    link: '_coaches.html',
+  },
   {
     id: 'totals_stats',
     type: 'table',
@@ -1235,8 +1354,18 @@
     name: 'Дополнительно',
     link: '_advanced.html',
   },
-  { id: 'pbp_stats', type: 'table', name: 'Игроки', link: '_play-by-play.html' },
-  { id: 'shooting_stats', type: 'table', name: 'Броски', link: '_shooting.html' },
+  {
+    id: 'pbp_stats',
+    type: 'table',
+    name: 'Игроки',
+    link: '_play-by-play.html',
+  },
+  {
+    id: 'shooting_stats',
+    type: 'table',
+    name: 'Броски',
+    link: '_shooting.html',
+  },
   {
     id: 'adj-shooting',
     type: 'table',
@@ -1255,15 +1384,30 @@
     name: 'Новобранцы.Сезонная статистика',
     link: '_rookies-season-stats.html',
   },
-  { id: 'final', type: 'table', name: 'Финал', link: '_final.html' },
-  { id: 'ratings', type: 'table', name: 'Рейтинги команд', link: '_ratings.html' },
+  {
+    id: 'final',
+    type: 'table',
+    name: 'Финал',
+    link: '_final.html',
+  },
+  {
+    id: 'ratings',
+    type: 'table',
+    name: 'Рейтинги команд',
+    link: '_ratings.html',
+  },
   {
     id: 'div_leaderboard',
     type: 'grid',
     name: 'Номера униформы',
     link: '_numbers.html',
   },
-  { id: 'transactions', type: 'transactions', name: 'Транзакции', link: '_transactions.html' },
+  {
+    id: 'transactions',
+    type: 'transactions',
+    name: 'Транзакции',
+    link: '_transactions.html',
+  },
 ];
 ```
 
@@ -1343,8 +1487,14 @@
     title: '2003 NBA Finals',
     link: 'https://content.sportslogos.net/logos/6/6662/full/1691__nba_playoffs-champion-2003.png',
   },
-  { title: '2004 NBA Finals', link: 'https://content.sportslogos.net/logos/6/6662/full/2986.gif' },
-  { title: '2005 NBA Finals', link: 'https://content.sportslogos.net/logos/6/6662/full/2999.gif' },
+  {
+    title: '2004 NBA Finals',
+    link: 'https://content.sportslogos.net/logos/6/6662/full/2986.gif',
+  },
+  {
+    title: '2005 NBA Finals',
+    link: 'https://content.sportslogos.net/logos/6/6662/full/2999.gif',
+  },
   {
     title: '2006 NBA Finals',
     link: 'https://content.sportslogos.net/logos/6/6662/full/4133__nba_finals-primary-2006.png',
@@ -1448,7 +1598,10 @@
     title: '1979',
     link: 'https://content.sportslogos.net/logos/6/980/full/nw025u6w6e3evj97lsnmre5pu.gif',
   },
-  { title: '1980', link: 'https://content.sportslogos.net/logos/6/980/full/5257.gif' },
+  {
+    title: '1980',
+    link: 'https://content.sportslogos.net/logos/6/980/full/5257.gif',
+  },
   {
     title: '1981',
     link: 'https://content.sportslogos.net/logos/6/980/full/q67zrjg7xh4tt6amkddxhgdbb.gif',
@@ -1477,20 +1630,38 @@
     title: '1987',
     link: 'https://content.sportslogos.net/logos/6/980/full/rbleglge5hjengshtu24ppn0g.gif',
   },
-  { title: '1988', link: 'https://content.sportslogos.net/logos/6/980/full/5259.gif' },
+  {
+    title: '1988',
+    link: 'https://content.sportslogos.net/logos/6/980/full/5259.gif',
+  },
   {
     title: '1989',
     link: 'https://content.sportslogos.net/logos/6/980/full/8c2806se0nwgfhhecoqq3372u.gif',
   },
-  { title: '1990', link: 'https://content.sportslogos.net/logos/6/980/full/5568.gif' },
-  { title: '1991', link: 'https://content.sportslogos.net/logos/6/980/full/4750.gif' },
-  { title: '1992', link: 'https://content.sportslogos.net/logos/6/980/full/4751.gif' },
+  {
+    title: '1990',
+    link: 'https://content.sportslogos.net/logos/6/980/full/5568.gif',
+  },
+  {
+    title: '1991',
+    link: 'https://content.sportslogos.net/logos/6/980/full/4750.gif',
+  },
+  {
+    title: '1992',
+    link: 'https://content.sportslogos.net/logos/6/980/full/4751.gif',
+  },
   {
     title: '1993',
     link: 'https://content.sportslogos.net/logos/6/980/full/7mi3t5ah4xfkcijvjl43jtho1.gif',
   },
-  { title: '1994', link: 'https://content.sportslogos.net/logos/6/980/full/4754.gif' },
-  { title: '1995', link: 'https://content.sportslogos.net/logos/6/980/full/4755.gif' },
+  {
+    title: '1994',
+    link: 'https://content.sportslogos.net/logos/6/980/full/4754.gif',
+  },
+  {
+    title: '1995',
+    link: 'https://content.sportslogos.net/logos/6/980/full/4755.gif',
+  },
   {
     title: '1996',
     link: 'https://content.sportslogos.net/logos/6/980/full/3fmy4hd6ps0ehjlze9iohse8m.gif',
@@ -1511,7 +1682,10 @@
     title: '2001',
     link: 'https://content.sportslogos.net/logos/6/980/full/pue78ud4yv6osxfgyo4gp0kez.gif',
   },
-  { title: '2002', link: 'https://content.sportslogos.net/logos/6/980/full/4763.png' },
+  {
+    title: '2002',
+    link: 'https://content.sportslogos.net/logos/6/980/full/4763.png',
+  },
   {
     title: '2003',
     link: 'https://content.sportslogos.net/logos/6/980/full/gqdhjxae6ooyhb8oneed71yds.gif',
@@ -1520,8 +1694,14 @@
     title: '2004',
     link: 'https://content.sportslogos.net/logos/6/980/full/y4nlzob7pjaah6u680nfmoipm.gif',
   },
-  { title: '2005', link: 'https://content.sportslogos.net/logos/6/980/full/2974.gif' },
-  { title: '2006', link: 'https://content.sportslogos.net/logos/6/980/full/2991.png' },
+  {
+    title: '2005',
+    link: 'https://content.sportslogos.net/logos/6/980/full/2974.gif',
+  },
+  {
+    title: '2006',
+    link: 'https://content.sportslogos.net/logos/6/980/full/2991.png',
+  },
   {
     title: '2007',
     link: 'https://content.sportslogos.net/logos/6/980/full/hq7kr5gmydgwm3yefhfq.gif',
