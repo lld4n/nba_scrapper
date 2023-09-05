@@ -390,20 +390,6 @@ app.get('/draft/:path', async (req, res) => {
   }
 });
 
-app.get('/draft/:path', async (req, res) => {
-  try {
-    const response = await draftpages(req.params.path);
-    res.send(response);
-  } catch (error) {
-    console.log(error);
-    const response: responseType = {
-      OK: false,
-      error,
-    };
-    res.status(500).send(response);
-  }
-});
-
 app.get('/coaches/:path', async (req, res) => {
   try {
     const response = await coacheslist(req.params.path);
