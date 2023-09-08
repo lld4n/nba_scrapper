@@ -1,5 +1,6 @@
 import express, { Router } from 'express';
 import serverless from 'serverless-http';
+import cors from 'cors';
 import {
   allstarcareerstats,
   allstarcontests,
@@ -42,10 +43,12 @@ import {
   teamspages,
   teamsyears,
 } from '../../src/api';
+
 import { responseType } from '../../src/@types/response';
 const api = express();
 
 const app = Router();
+app.use(cors());
 app.get('/other/actualseason', async (req, res) => {
   try {
     const response = await otheractualseason();
