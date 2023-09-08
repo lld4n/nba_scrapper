@@ -15,7 +15,7 @@
 - [ ] referees
 - [ ] leaders
 
-потихоньку пишу REST API, который собирает данные с basketball-conference, bing.images ...
+потихоньку пишу `REST API`, который собирает данные с `basketball-conference`, `bing.images` ...
 
 Пробел указывается через `+`
 
