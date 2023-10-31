@@ -1,6 +1,6 @@
 # Tsukuyomi Dream
 
-Апи доступно по ссылке https://nbascrapper.lldan.ru/api/other/actualseason
+API доступно по ссылке https://nbascrapper.lldan.ru/api/other/actualseason
 
 - [x] search
 - [x] actualseason
