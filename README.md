@@ -1,5 +1,7 @@
 # Tsukuyomi Dream
 
+Апи доступно по ссылке https://nbascrapper.lldan.ru/api/other/actualseason
+
 - [x] search
 - [x] actualseason
 - [x] players
@@ -10,12 +12,8 @@
 - [x] coaches
 - [x] playoffs
 - [x] all-star
-- [ ] awards
-- [ ] executives
-- [ ] referees
-- [ ] leaders
 
-потихоньку пишу `REST API`, который собирает данные с `basketball-conference`, `bing.images` ...
+`REST API`, который собирает данные с [basketball-conference](https://www.basketball-reference.com/) и `bing.images`
 
 Пробел указывается через `+`
 
